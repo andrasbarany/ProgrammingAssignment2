@@ -30,12 +30,13 @@ makeCacheMatrix <- function(x = matrix()) {
 
 ## Write a short comment describing this function
 ##
-## cacheSolve takes a matrix as an argument and tries to see whether the
-## value of solve(matrix) is defined; if it is, it will not calculate
-## the inverse but simply return the pre-set (cached) value.
+## cacheSolve takes an argument of the type of the output of makeCacheMatrix
+## as an argument and tries to see whether that list's getsolution() function
+## is null or not. If it is not, it will not calculate the inverse but simply
+## return the pre-set (cached) value.
 ##
-## If it is not defined (e.g. is.null(matrix) is TRUE), it will solve
-## the matrix using the makeCacheMatrix defined above.
+## If it is null (e.g. is.null(s) is TRUE), it will solve the matrix using
+## the makeCacheMatrix function defined above.
 
 cacheSolve <- function(x, ...) {
     ## Return a matrix that is the inverse of 'x'
